@@ -44,115 +44,25 @@
 	gives the answer to the following counting questions, and that $b_n = \frac{1}{n+1}{2n}\choose{n}$.  These numbers are called the $Catalan\ Numbers$ and are nearly as ubiquitous as the Fibonacci Numbers.\\
 	\newline
 	How many binary trees on $n$ vertices are there?  Follow the steps below to produce a closed formula for $b_n$ using a generating function.\\
-	
-	3.0 Denote by $b_n$ the number of binary trees on vertices. Please prove that $b_n = b_0 b_{n−1} + b_1b_{n−2} + · · · + b_{n−1}b_0$ with $b_0 = 1$.\\
-	3.1 Let $g(x) = \sum_{n=0}^{\infty }b_nx^n$ be the generating function for the sequence $(b_n) n≥0$ of the number of binary trees on $n$ vertices. Show that $g(x) = 1 + x(g(x))^2$.\\
+	\newline
+	3.0 Denote by $b_n$ the number of binary trees on vertices.  Please prove that $b_n = b_0b_{n-1} + b_1b_{n-2} + ... + b_{n-1}b_0$ with $b_0 = 1$.\\
+	3.1 Let $g(x) = \sum_{n=0}^{\infty}b_nx^n$ be the generating function for the sequence $b_n n\geq0$ of the number of binary trees on $n$ vertices.  Show that $g(x) =1+x(g(x))^2$.\\
 	3.2 Use the quadratic formula to show that $g(x) = 1-\frac{\sqrt{1-4x}}{2x}$. Note that you will have two options to use for $g(x)$, one of which you must rule out.\\
-	3.3 Recall The
-	√
-	1− 1−4x
-	.
-	2x
-	Binomial Theorem: For any real number
-	Note that you will have two options to use for
-	r , (1 + z) r =
-	P ∞
-	r
-	k=0 k
-	
-	z k ,
-	where
-	
-	   r(r − 1)(r − 2) · · · (r − k + 1)
-	r
-	, r ∈ R, 0 ≤ k ∈ Z ;
-	=
-	k!
-	 0,
-	k
-	k < 0 .
-	1
-	Use the Binomial Theorem to obtain g(x) =
-	2x
-	P
-	1 −
-	
-	∞ 
-	X
-	1/2
-	k=0
-	k
-	P
-	!
-	(−4x)
-	k
-	.
-	∞
-	1/2
-	1
-	k
-	n 2n+1 n
-	3.4 Manipulate g(x) = 2x
-	1 − k=0 1/2
-	into g(x) = ∞
-	x . The reason for
-	n=0 n+1 (−1) 2
-	k (−4x)
-	n
-	doing this is so that x 's coecient can be read (remember that b n is dened to be [x n ]g(x) .) The
-	following steps  are suggested, but not required;
-	follow them only if you have no idea of your own. Begin
-	
-	P ∞ 1/2 
-	1
-	k
-	with g(x) = 2x 1 − k=0 k (−4x) .
-	
-	
-	
-	
-	 Pull out the rst term on the summation, and simplify.
-	 Substitute n + 1 for k ; this will allow the summation to begin at zero.
-	 Pull the negative that resulted from the rst manipulation in this list into the summation.
-	 Bring 1/2x into the summation.
-	
-	
-	n−1/2
-	1/2
-	1
-	(−1) n 2 1 .
-	3.5 Verify that n+1
-	= n+1
-	n
-	 1
-	
-	n−1/2
-	3.6 Verify that 2n
-	.
-	n 2 2n =
-	n
-	
-	X 2n  x n
-	3.7 Finally, coerce g(x) into
-	.
-	n n + 1
-	
+	3.3 Recall $The\ Binomial\ Theorem:\ For\ any\ real\ number\ r,\ (1+z)^r = \sum_{c=0}^{\infty} {r}\choose{k}z^k,\ where$\\
+	\[ {r}\choose{k} = \lbrace_{0, k<0.}^{\frac{r(r-1)(r-2)...(r-k+1)}{k!}, r \in \mathbb{R},0\leq k \in \mathbb{Z};}   \]
+	Use the Binomial Theorem to obtain $g(x) = \frac{1}{2x}$\\
 	\textbf{Solution: }\\
 	\newline
 	\textbf{Sub-Experience Four: Non-Standard Dice}\\
-	
 	\textbf{Solution: }\\
 	\newline
 	\textbf{Sub-Experience Five: Eul-ing the GF Machine}\\
-	
 	\textbf{Solution: }\\
 	\newline
 	\textbf{Sub-Experience Six: The Twelve-Fold Way}\\
-	
 	\textbf{Solution: }\\
 	\newline
 	\textbf{[Bonus] Sub-Experience Seven:}\\	
-	
 	\textbf{Solution: }\\
 	\newline
 \end{document}
