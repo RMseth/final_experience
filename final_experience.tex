@@ -65,6 +65,18 @@
 	\textbf{Solution: }\\
 	\newline
 	\textbf{Sub-Experience Four: Non-Standard Dice}\\
+	A 6-sided die labeled with the integers 1,2,3,4,5,6 will be called a $standard\ die$.  The goal for this part of the Midterm Experience is to determine all ways to label a pair of dice with positive integers so that the probabilities of rolling the usual sums 2,3,...,12 are the same, but the labels are non-standard.\\
+	\newline
+	\textbf{Step 1.} Let $p(x) = x + x^2 + x^3 + x^4 + x^5 + x^6$, and explain why $(p(x))^2$ is the generating function for the probabilities of outcomes in rolling a pair of standard dice.\\
+	\newline
+	\textbf{Step 2.} Let $A = (a_1,a_2,a_3,a_4,a_5,a_6)$ and $B = (b_1,b_2,b_3,b_4,b_5,b_6)$ be two lists of positive integers.  Put $p_A(x) = x^{a_1} + x^{a_2} + x^{a_3} + x^{a_4} + x^{a_5} + x^{a_6}$ and $p_B(x) = x^{b_1} + x^{b_2} + x^{b_3} + x^{b_4} + x^{b_5} + x^{b_6}$. Explain why finding $a_i$s and $b_i$s such that $p_A(x)p_B(x) = (p(x))^2$ is relevant this part of the Experience.\\
+	\newline
+	\textbf{Step 3.} Factor $p(x)$ into irreducible polynomials and use this factorization to help solve for the $a_i$s and $b_i$s.  Specifically, the factorization will force the form of $p_A(x)$ to be something like $p_1(x)^qp_2(x)^rp_3(x)^sp_4(x)^t$, where $0\leq q$, r,s,$t\leq2$ and $p_i(x)$, for $ 1\leq i\leq4$, is a factor of $p(x)$.  In your solution to this step, you must motivate why you take this step.\\
+	\newline
+	\textbf{Step 4.} Begin to reduce the possibilities for q,r,s, and t by using information from $p_A(1)$ and $p_A(0)$.  Note that, on one hand $p_A(1) = 1^{a_1)} + 1^{a_2)} + 1^{a_3)} + 1^{a_4)} + 1^{a_5)} + 1^{a_6)} = 6(since\ a_i > 0)$, and on the other hand we have $p_A(1) = p_1(1)^qp_2(1)^rp_3(1)^sp_4(1)^t$.  Similarly, there are two ways to view $p_A(0)$.\\
+	\newline
+	\textbf{Step 5.} List all possible ways to label a pair of dice so that the probabilities of obtaining the sums 2,3,4,5,6,7,8,9,10,11,12 are $\frac{1}{36},\frac{2}{36},\frac{3}{36},\frac{4}{36},\frac{5}{36},\frac{6}{36},\frac{5}{36},\frac{4}{36},\frac{3}{36},\frac{2}{36},\frac{1}{36}$, respectively.  One such way will be the standard way.  In your solution for this step, explain why you have proved that the labels you have found are the only possible ones that give the desired probabilities for roll-outcomes.\\
+	\newline
 	\textbf{Solution: }\\
 	\newline
 	\textbf{Sub-Experience Five: Eul-ing the GF Machine}\\
