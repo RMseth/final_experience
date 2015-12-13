@@ -32,10 +32,13 @@
 	\newline
 	
 % ######## sub 2 ########
-	\textbf{Sub-Experience Two: Stirling Numbers of the Second Kind}\\
-	Recall that a partition of a set $X$ into $k$ blocks is a set $\prod = \{B_1,...,B_k\}$ where the $B_i$s are disjoint nonempty subsets of $X$ whose union is $X$. Define ${n}\choose{k}$ to be the number of partitions of a set with $n$ elements into $k$ blocks.\\
-	\textbf{2.1} Use the Principle of Inclusion/Exclusion to create a formula for ${n}\choose{k}$.  Please verify that the formula you find actually works.\\
-	\textbf{2.2} Use exponential generating functions to create a formula for ${n}\choose{k}$.  Please verify that the formula you find actually works.  It may appear different than the found in part 2.1, so be careful.\\
+	\textbf{Sub-Experience Two: Developing the EGF Lobe}\\
+	Here are a few counting problems, the first of which is particularly easy to solve with an exponential generating function.  The answer is very simple and so it should have an elegant combinatorial proof.
+	\begin{enumerate}
+		\item Using exponential generating function, determine the number of $n$-digit quaternary sequences built from \{0,1,2,3\} with an even number of 0's and an odd number of 1's.
+		\item $Not\ using$ exponential generating functions, please solve the counting problem above.
+		\item Solve the recurrence from the pizza-cutting problem using exponential generating functions; that is, find a closed formula for $P(n)$ where, for $n\geq1, P(n) = P(n-1) + n$ with $P(0) = 1$.  Of course, you know the solution should be $P(n) = \frac{1}{2}n^2 + \frac{1}{2}n + 1$.
+	\end{enumerate}
 	\textbf{Solution: }\\
 	\newline
 % ######## sub 3 ########
