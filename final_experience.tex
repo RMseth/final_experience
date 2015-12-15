@@ -67,7 +67,7 @@
 	3.2 Use the quadratic formula to show that $g(x) = 1-\frac{\sqrt{1-4x}}{2x}$. Note that you will have two options to use for $g(x)$, one of which you must rule out.\\
 	3.3 Recall $The\ Binomial\ Theorem:\ For\ any\ real\ number\ r,\ (1+z)^r = \sum_{k=0}^{\infty}\binom{r}{k}z^k$, where 
 % The \left\lbrace creates the { but it will yell at you saying that the \right\brace is missing you don't need to worry about the right one, it's not in the paper and it should compile with the right one missing.
-	\[\binom{r}{k} = \left \lbrace \overset{\frac{r(r-1)(r-2)...(r-k+1)}{k!}}{0,},\ \overset{r\in\mathbb{R},\ 0\leq k\in\mathbb{Z}}{k<0}\]
+	\[\binom{r}{k} = \left \lbrace \overset{\frac{r(r-1)(r-2)...(r-k+1)}{k!}}{0,},\ \overset{r\in\mathbb{R},\ 0\leq k\in\mathbb{Z}}{k<0} \right \rbrace \]
 	Use the Binomial Theorem to obtain $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$.\\
 	3.4 Manipulate $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$ into $g(x) = \sum_{n=0}^{\infty}\binom{\frac{1}{2}}{k}(-1)^n2^{2n+1}x^n$.  The reason for doing this is so that $x^n$'s coefficient can be read (remember that $b_n$ is defined to be$ [x^n]g(x)$.)  The following steps are suggested, but not required; follow them only if you have no idea of your own.  Begin with $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$.\\
 	\begin{itemize}
@@ -95,17 +95,62 @@
 	\newline
 	\textbf{Step 2.} Let $A = (a_1,a_2,a_3,a_4,a_5,a_6)$ and $B = (b_1,b_2,b_3,b_4,b_5,b_6)$ be two lists of positive integers.  Put $p_A(x) = x^{a_1} + x^{a_2} + x^{a_3} + x^{a_4} + x^{a_5} + x^{a_6}$ and $p_B(x) = x^{b_1} + x^{b_2} + x^{b_3} + x^{b_4} + x^{b_5} + x^{b_6}$. Explain why finding $a_i$s and $b_i$s such that $p_A(x)p_B(x) = (p(x))^2$ is relevant this part of the Experience.\\
 	\newline
-	\textbf{Step 3.} Factor $p(x)$ into irreducible polynomials and use this factorization to help solve for the $a_i$s and $b_i$s.  Specifically, the factorization will force the form of $p_A(x)$ to be something like $p_1(x)^qp_2(x)^rp_3(x)^sp_4(x)^t$, where $0\leq q$, r,s,$t\leq2$ and $p_i(x)$, for $ 1\leq i\leq4$, is a factor of $p(x)$.  In your solution to this step, you must motivate why you take this step.\\
+	\textbf{Step 3.} Factor $p(x)$ into irreducible polynomials and use this factorization to help solve for the $a_i$s and $b_i$s.  Specifically, the factorization will force the form of $p_A(x)$ to be something like $p_1(x)^qp_2(x)^rp_3(x)^sp_4(x)^t$, where $0\leq q,r,s,t\leq2$ and $p_i(x)$, for $ 1\leq i\leq4$, is a factor of $p(x)$.  In your solution to this step, you must motivate why you take this step.\\
 	\newline
-	\textbf{Step 4.} Begin to reduce the possibilities for q,r,s, and t by using information from $p_A(1)$ and $p_A(0)$.  Note that, on one hand $p_A(1) = 1^{a_1)} + 1^{a_2)} + 1^{a_3)} + 1^{a_4)} + 1^{a_5)} + 1^{a_6)} = 6(since\ a_i > 0)$, and on the other hand we have $p_A(1) = p_1(1)^qp_2(1)^rp_3(1)^sp_4(1)^t$.  Similarly, there are two ways to view $p_A(0)$.\\
+	\textbf{Step 4.} Begin to reduce the possibilities for q,r,s, and t by using information from $p_A(1)$ and $p_A(0)$.  Note that, on one hand $p_A(1) = 1^{a_1} + 1^{a_2} + 1^{a_3} + 1^{a_4} + 1^{a_5} + 1^{a_6} = 6\ (since\ a_i > 0)$, and on the other hand we have $p_A(1) = p_1(1)^qp_2(1)^rp_3(1)^sp_4(1)^t$.  Similarly, there are two ways to view $p_A(0)$.\\
 	\newline
 	\textbf{Step 5.} List all possible ways to label a pair of dice so that the probabilities of obtaining the sums 2,3,4,5,6,7,8,9,10,11,12 are $\frac{1}{36},\frac{2}{36},\frac{3}{36},\frac{4}{36},\frac{5}{36},\frac{6}{36},\frac{5}{36},\frac{4}{36},\frac{3}{36},\frac{2}{36},\frac{1}{36}$, respectively.  One such way will be the standard way.  In your solution for this step, explain why you have proved that the labels you have found are the only possible ones that give the desired probabilities for roll-outcomes.\\
 	\newline
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-
-
+	\textbf{Step 1:}\\
+	Say we have $ax^n$, where $n$ represents the number rolled on a standard die and $a$ represents the number of ways you can roll n, then the probability of rolling a standard die, $p(x)$, can be represented as $p(x) = x + x^2 + x^3 + x^4 + x^5 + x^6$.\\
+	Now when we have two standard dice, $n$ represents the sum of the number when the dice are rolled, and $a$ still represents the number of ways you can roll $n$.  Now we have:\\
+	\[x^2 + 2x^3 + 3x^4 + 4x^5 + 5x^6 + 6x^7 + 5x^8 + 4x^9 + 3x^{10} + 2x^{11} + x^{12} \]
+	which is equal to:\\
+	\[(x + x^2 + x^3 + x^4 + x^5 + x^6)(x + x^2 + x^3 + x^4 + x^5 + x^6) = p(x)p(x) = (p(x))^2 \]
+	\newline
+	\textbf{Step 2:}\\
+	Assume there are two dice $A+B$ labeled with positive integers that give you the same probabilities as regular dice.  Then \[A = \{a_1, a_2, a_3, a_4, a_5, a_6 \}\]
+	\[B = \{b_1, b_2, b_3, b_4, b_5, b_6 \}\]
+	If we use the same method of notation as in step 1 then
+	\[p_A(x) = x^{a_1} + x^{a_2} + x^{a_3} + x^{a_4} + x^{a_5} + x^{a_6}\]
+	\[p_B(x) = x^{b_1} + x^{b_2} + x^{b_3} + x^{b_4} + x^{b_5} + x^{b_6} \]
+	Since we are finding all the ways to label a pair of non-standard dice such that the probabilities of rolling the usual sums is the same (represented by $(p(x))^2$).  Then, we need to find $a_i$s and $b_i$s such that $p_A(x)p_B(x) = (p(x))^2$.\\
+	\newline
+	\textbf{Step 3:}\\
+	To help solve for the $a_i$s and $b_i$s we can factor $p(x)$ into irreducible polynomials.
+	\[p(x) = (x + x^2 + x^3 + x^4 + x^5 + x^6) = x(x+1)(x^2 + x + 1)(x^2 - x + 1) \]
+	we can also see that\\
+	\[(p(x))^2 = x^2(x+1)^2(x^2 + x + 1)^2(x^2 - x + 1)^2 \]
+	This forces the form of $p_A(x)$ to be $x^q(x+1)^r(x^2+x+1)^s(x^2-x+1)^t$ where $0\leq q,r,s,t\leq2$.\\
+	\newline
+	\textbf{Step 4:}\\
+	To reduce the possibilities for q,r,s, and t. Let's use the info $p_A(1)$ and $p_A(0)$.\\
+	$p_A(1)$ will help restrict our possibilities for r and s because $p_A(1) = 1^{a_1} + 1^{a_1} + 1^{a_1} + 1^{a_1} + 1^{a_1} + 1^{a_1} = 6 = (1)^q(1+1)^r(1^2+1+1)^s+(1^2 - 1 + 1)^t = 1^q2^r3^s1^t$.  From this we see that r and s must equal 1.\\
+	\newline
+	Now $p_A(0) = 0 = 0^q1^r1^s1^t$, so q cannot equal 0.\\
+	If we let q=2 then $x^2(x+1)(x^2+x+1)(x^2-x+1)^0 = x^52x^42x^3x^2$ which gives us the set of labels \{5,4,4,3,3,2\} However, we want labels whose sums are the same as two standard die and since $a_i,b_i > 0$ then the smallest number on $b_i$ could only be a 1 therefore making the smallest sum of $a_i+b_i = 3$, when we need it to be 2.\\
+	So our only option is to let $a=1$. So we know that $q=1,\ r=1,\ and\ s=1$ so now to find t which can either be 0,1, or 2.\\
+	\newline
+	\textbf{Step 5:}\\
+	If we let $t=0$ then $x(x+1)(x^2+x+1)(x^2-x+1)^0 = x^4 + x^3 + x^3 + x^2 + x^2 + x$ which gives us the labels \{4,3,3,2,2,1\}\\
+	\newline
+	If $t = 1$ then:\\
+	\[x(x+1)(x^2+x+1)(x^2-x+1)^1 = x^6 + x^5 + x^4 + x^3 + x^2 + x\]
+	which gives us the labels \{6,5,4,3,2,1\} which is a regular die.\\
+	Finally if $t=2$ then
+	\[x(x+1)(x^2+x+1)(x^2-x+1)^2 = x^8 + x^6 + x^5 + x^4 + x^3 + x \]
+	which gives us the labels \{8,6,5,4,3,1\}.\\
+	\newline
+	So the labels \{4,3,3,2,2,1\} and \{8,6,5,4,3,1\} are the only non-standard labels with positive integers such that the probabilities of rolling the usual sums 2,3,...,12 are the same as standard dice.\\
+	To verify this we can also see that
+	\[(x^4 + x^3 + x^3 + x^2 + x^2 + x)(x^8 + x^6 + x^5 + x^4 + x^3 + x)\\= x^2 + 2x^3 + 3x^4 + 4x^5 + 5x^6 + 6x^7 + 5x^8 + 4x^9 + 3x^{10} + 2x^{11} + x^{12} \]
+	
+	
+	
+	
 
 % ######## sub 5 ########
 	\textbf{Sub-Experience Five: Eul-ing the GF Machine}\\
