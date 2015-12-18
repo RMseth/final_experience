@@ -52,7 +52,22 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-
+	\textbf{2.1}\\
+	Assuming that the sequence allows for leading 0's, we can have two ways of calculating "odd number of 1's":
+	\[\binom{4}{1} = \binom{4}{3} = 4\]
+	For an "even number of 0's":\\
+	There are two cases that we'll need to consider.
+	\begin{enumerate}
+		\item There can be either zero 0's or 2 0's.  The first case will then have the other 3 digits be either 2 or 3.  We then have $2^3$ choices.  If there are 2 0's then we will have $\binom{3}{2}2$ choices.  You can choose where you want to place the 0's and then the other numbers will be either 2 or 3.\\
+		Overall in this case we will have $4(2^3 + 2\binom{3}{2}) = 4(8 + 2 * 3) = 56$ possibilities.
+		\item The only possibility is that no other digit will be 0, because the \# of zeros must be even.  That means that the remaining 2 choices is either 2 or 3.  This then gives us $4 * 2 = 8$ possibilities for this case.\\
+	\end{enumerate}
+	
+	Because case 1 and 2 are mutually exclusive, we then have a total of $56 + 8 = 64$ possibilities for the sequence which is $4^3$.
+	
+	
+	\textbf{2.2}\\
+	\textbf{2.3}\\
 
 % ######## sub 3 ########
 	\textbf{Sub-Experience Three: Catalan Numbers}\\
@@ -207,7 +222,9 @@
 		\end{tabular}
 	\end{center}
 	
-	Therefore $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ is true.
+	Therefore $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ is true.\\
+	\newline
+	\textbf{3.7}
 
 % ######## sub 4 ########
 	\textbf{Sub-Experience Four: Non-Standard Dice}\\
