@@ -331,23 +331,33 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-	\textbf{Part 1:}
+	\textbf{Part 1:}\\
 	To determine the number of partitions of 20 into at most 5 parts, we can use the formula found in lecture meeting forty-one notes:\\
-	\[e(x) = \prod_{i\geq1}^{}(1-x^i)^{-1}\]
+	\[\varepsilon(x) = \prod_{i\geq1}^{}(1-x^i)^{-1}\]
 	Since we need the number of partitions of 20 into at most 5 parts.  We will expand the equation using $i=5$ to obtain the coefficient on $x^20$.\\
 	\[p_k(n) = p_5(20) = (1-x)^{-1}(1-x^2)^{-1}(1-x^3)^{-1}(1-x^4)^{-1}(1-x^5)^{-1}\]
 	\[ = \frac{1}{(1-x)(1-x^2)(1-x^3)(1-x^4)(1-x^5)}\]
 	\[ = 1 + x + 2x^2 + 3x^3 + 5x^4 + 7x^5 + ... + 164x^{19} + 192x^{20} + 221x^{21} + ... + 603x^{29} + 674x^{30} + 747x^{31} + ...\]
-\textbf{Part 2:}
-
-\[\left( {{x}^{28}}+{{x}^{24}}+{{x}^{20}}+{{x}^{16}}+{{x}^{12}}+{{x}^{8}}+{{x}^{4}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{25}}+{{x}^{20}}+{{x}^{15}}+{{x}^{10}}+{{x}^{5}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{27}}+{{x}^{24}}+{{x}^{21}}+{{x}^{18}}+{{x}^{15}}+{{x}^{12}}+{{x}^{9}}+{{x}^{6}}+{{x}^{3}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{28}}+{{x}^{26}}+{{x}^{24}}+{{x}^{22}}+{{x}^{20}}+{{x}^{18}}+{{x}^{16}}+{{x}^{14}}+{{x}^{12}}+{{x}^{10}}+{{x}^{8}}+{{x}^{6}}+{{x}^{4}}+{{x}^{2}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{29}}+{{x}^{28}}+{{x}^{27}}+{{x}^{26}}+{{x}^{25}}+{{x}^{24}}+{{x}^{23}}+{{x}^{22}}+{{x}^{21}}+{{x}^{20}}+{{x}^{19}}+{{x}^{18}}+{{x}^{17}}+{{x}^{16}}+{{x}^{15}}+{{x}^{14}}+{{x}^{13}}+{{x}^{12}}+{{x}^{11}}+{{x}^{10}}+{{x}^{9}}+{{x}^{8}}+{{x}^{7}}+{{x}^{6}}+{{x}^{5}}+{{x}^{4}}+{{x}^{3}}+{{x}^{2}}+x+1\right) \]
-
-\[...+1006\cdot {{x}^{34}}+913\cdot {{x}^{33}}+828\cdot {{x}^{32}}+747\cdot {{x}^{31}}+674\cdot {{x}^{30}}+603\cdot {{x}^{29}}+540\cdot {{x}^{28}}+480\cdot {{x}^{27}}+427\cdot {{x}^{26}}+377\cdot {{x}^{25}}+333\cdot {{x}^{24}}+291\cdot {{x}^{23}}+255\cdot {{x}^{22}}+221\cdot {{x}^{21}}+192\cdot {{x}^{20}}+...\]
-
-\textbf{Part 3:}
-\tiny\[\left( {{x}^{11}}+1\right) \cdot \left( {{x}^{12}}+1\right) \cdot \left( {{x}^{13}}+1\right) \cdot \left( {{x}^{14}}+1\right) \cdot \left( {{x}^{14}}+{{x}^{7}}+1\right) \cdot \left( {{x}^{15}}+1\right) \cdot \left( {{x}^{16}}+1\right) \cdot \left( {{x}^{16}}+{{x}^{8}}+1\right) \]\[\cdot \left( {{x}^{17}}+1\right) \cdot \left( {{x}^{18}}+1\right) \cdot \left( {{x}^{18}}+{{x}^{9}}+1\right) \cdot \left( {{x}^{18}}+{{x}^{12}}+{{x}^{6}}+1\right) \cdot \left( {{x}^{18}}+{{x}^{15}}+{{x}^{12}}+{{x}^{9}}+{{x}^{6}}+{{x}^{3}}+1\right) \cdot \left( {{x}^{19}}+1\right) \]\[\cdot \left( {{x}^{20}}+1\right) \cdot \left( {{x}^{20}}+{{x}^{10}}+1\right) \cdot \left( {{x}^{20}}+{{x}^{15}}+{{x}^{10}}+{{x}^{5}}+1\right) \cdot \left( {{x}^{20}}+{{x}^{16}}+{{x}^{12}}+{{x}^{8}}+{{x}^{4}}+1\right)\]\[ \cdot \left( {{x}^{20}}+{{x}^{18}}+{{x}^{16}}+{{x}^{14}}+{{x}^{12}}+{{x}^{10}}+{{x}^{8}}+{{x}^{6}}+{{x}^{4}}+{{x}^{2}}+1\right) \]\[\cdot \left( {{x}^{20}}+{{x}^{19}}+{{x}^{18}}+{{x}^{17}}+{{x}^{16}}+{{x}^{15}}+{{x}^{14}}+{{x}^{13}}+{{x}^{12}}+{{x}^{11}}+{{x}^{10}}+{{x}^{9}}+{{x}^{8}}+{{x}^{7}}+{{x}^{6}}+{{x}^{5}}+{{x}^{4}}+{{x}^{3}}+{{x}^{2}}+x+1\right) \]
-
-\normalsize\[\mathrm{\tt (\%o18) }\quad ...+627\cdot {{x}^{20}}+490\cdot {{x}^{19}}+385\cdot {{x}^{18}}+297\cdot {{x}^{17}}+231\cdot {{x}^{16}}+176\cdot {{x}^{15}}+135\cdot {{x}^{14}}+101\cdot {{x}^{13}}+\]\[77\cdot {{x}^{12}}+56\cdot {{x}^{11}}+42\cdot {{x}^{10}}+30\cdot {{x}^{9}}+22\cdot {{x}^{8}}+15\cdot {{x}^{7}}+11\cdot {{x}^{6}}+7\cdot {{x}^{5}}+5\cdot {{x}^{4}}+3\cdot {{x}^{3}}+2\cdot {{x}^{2}}+x+1\]
+	Here we can see the coefficient on $x^{20}$ is 192, therefore there are 192 partitions of 20 into at most 5 parts.\\
+	\newline
+	\textbf{Part 2:}\\
+	To determine the number of partitions of 30 into parts of size less than or equal to 5, where here $x_i>5$.  In lecture meeting forty-one notes is defines $p\leq_k(n)$ to be the number of partitions of $n$ into parts no larger than $k$.  $n=\lambda_1 + \lambda_2 + ...$ implies $\lambda_i\leq k$ for all $i\geq1$.  The notes also go on to specify that $p\leq_K(n) = p_k(n)$ and
+	\[\sum_{n\geq0}^{}p\leq_k(n)x^n = \prod_{i=1}^{k}(1-x^i)^{-1}\]
+	Therefore according to this formula, we can use the same series we found in part 1.  The only difference is we need to find the coefficient on $x^{80}$, which is 674.  This means that there are 674 partitions of 30 into parts of size less than or equal to 5.\\
+	\newline
+	\textbf{Part 3:}\\
+	We can continue using the formula $\varepsilon(x) = \prod_{i\geq1}^{}(1-x^i)^{-1}$ to help us find the partitions of 20. Since we don't need to find any parts of it, we can take $i=20$, therefore.
+	\[p(20) = \frac{1}{(1-x)(1-x^2)(1-x^3)(1-x^4)...(1-x^{20})}\]
+	\[same as in part 1 (up to x^{20})\]
+	We see the coefficient on $x^{20}$ is 627, therefore there are 627 partitions of 20.\\
+	\newline
+	\textbf{Part 4:}\\
+	The Frobenius number of S is the largest number that cannot be expressed as a linear combination, with integer coefficients, of numbers from S.  For this problem S=$\{7,9,11\}$ so we need to find the largest number that cannot be expressed as $f=7a + 9b + 11c$.  To find this we can also use the formula $\varepsilon(x) = \prod_{i\geq1}^{}(1-x^i)^{-1}$.\\
+	If we use $i = \{7,9,\ and\ 11\}$, then 
+	\[\frac{1}{(1-x^7)(1-x^9)(1-x^{11})}\]
+	will give us a series where if $ax^n$ has a coefficient $a\geq1$ then it can be expressed as a linear combination of $\{7,9,11\}$.  Therefore, we need to find the largest $ax^n$ where $a=0$.  So, $\frac{1}{(1-x^7)(1-x^9)(1-x^{11})}$\\
+	$\frac{1 + x^7 + x^9 + x^{11} + x^{14} + x^{16} + 2x^{18} + x^{20} + x^{22} + x^{23} + 2x^{25} + 2x^{27} + ...}{x^{28} + 2x^{29} + x^{31} + x^{32} + x^{33} + 2x^{34} + x^{35} + 3x^{36} + x^{37} + 2x^{38} + ...}$\\
+	Here we can see the greatest $ax^n$ where $a=0$ is $x^{30}$, and we also know it will always be the greatest because we can write 31,32,33,34,35,36, and 37 as a linear combination of 7s,9s, and 11s, and since 7 is the smallest number of S.  We can just add it to any of those numbers to get any other we want.  Therefore 30 is the Frobenius number for $\{7,9,11\}$.
 
 
 % ######## sub 6 ########
