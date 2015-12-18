@@ -20,8 +20,7 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-
-
+	$D_n = \sum_{i=0}^{\infty} (-1)^n\binom{n}{i}(n-i0)$
 	\textbf{Sub-Experience Two, Part One: PIE Approach}\\
 	The formula you obtain above should involve a truncated power series for $e^{-1}$.  Show that $D_n = \lfloor\frac{n!}{e}+\frac{1}{2}\rfloor, for\ n > 0$. (For $n=0$, the formula doesn't work: $D_0 = 1$, but the formula gives 0.)\\
 	\newline
@@ -39,7 +38,7 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-
+	
 
 % ######## sub 2 ########
 	\textbf{Sub-Experience Two: Developing the EGF Lobe}\\
@@ -53,6 +52,20 @@
 	\newline
 % ***** solution section *****
 	\textbf{2.1}\\
+% need to write the explination
+	$e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...$\\ 
+	$e^{-x} = 1 - \frac{x}{1!} + \frac{x^2}{2!} - \frac{x^3}{3!} + \frac{x^4}{4!} - ...$\\
+% need to write the explination
+	$sinh(x) = \frac{e^x - e^{-x}}{2} = \frac{x}{1!} + \frac{x^3}{3!} + \frac{x^5}{5!} + ...$\\
+% need to write the explination
+	$cosh(x) = \frac{e^x + e^{-x}}{2} = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + ...$\\
+% need to write the explination
+	$(\frac{e^x + x^{-x}}{2})(\frac{e^x - e^{-x}}{2}) $\\
+	$(\frac{e^{2x} + x^{-2x}}{4})$\\
+	$\frac{1}{4}[\sum_{n=0}^{\infty}\frac{(2x)^n}{n!} - \sum_{n=0}^{\infty}\frac{(-2x)^n}{n!}]$\\
+	$\frac{1}{4}[\sum_{n=0}^{\infty}2^n\frac{(2)^n}{n!} - \sum_{n=0}^{\infty}(-2)^n\frac{(x)^n}{n!}]$\\
+	$\sum_{n=0}^{\infty}\frac{2^n-(-2)^n}{4}\frac{(x)^n}{n!}$\\
+	\textbf{2.2}\\
 	Assuming that the sequence allows for leading 0's, we can have two ways of calculating "odd number of 1's":
 	\[\binom{4}{1} = \binom{4}{3} = 4\]
 	For an "even number of 0's":\\
@@ -140,7 +153,6 @@
 	
 	\textbf{3.6}\\
 	To verify that $\binom{\frac{1}{2}}{n+1} = \frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)^n\frac{1}{2}$ let us compute the first 5 values for each expression:\\
-% need to make the rows taller and the space between tables larger
 	\begin{center}
 		\begin{tabular}{|c|c|}
 			\hline
@@ -182,7 +194,7 @@
 	
 	Therefore $\binom{\frac{1}{2}}{n+1} = \frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)\frac{1}{2}$ if true.\\
 	\newline
-	\textbf{3.6}\\
+	\textbf{3.7}\\
 	To verify that $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ we will do the same thing we did in 3.5 and compute the first 5 value for each expression.\\
 	\begin{center}
 		\begin{tabular}{|c|c|}
@@ -224,7 +236,6 @@
 	
 	Therefore $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ is true.\\
 	\newline
-	\textbf{3.7}
 
 % ######## sub 4 ########
 	\textbf{Sub-Experience Four: Non-Standard Dice}\\
