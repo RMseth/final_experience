@@ -153,17 +153,19 @@
 	\newline
 	\textbf{3.1}\\
 	If we let $g(x) = \sum_{n-0}^{\infty}b_nx^n$ for $(b_n)n\geq0$ then $g(x) = b_0 + b_1x + b_2x^2 + b_3x^3 + ... + b_nx^n + ...$ If we multiply $g(x)$ by itself to obtain $(g(x))^2$ we get $(g(x))^2 = b_0b_0 + (b_1b_0 + b_0b_1)x + (b_2b_0 + b_1b_1 + b_0b_2)x^2$ which we can see by looking at the coefficients are equal to the equations used to obtain the Catalan numbers.  Therefore:
-	\[(g(x))^2 = b_1 + b_2 + b_3x^2 + b_4x^3 + ...\]
+	\[(g(x))^2 = b_1 + b_2x + b_3x^2 + b_4x^3 + ...\]
 	we can convert this back to $g(x)$ if we multiply by x and add $b_0$, therefore:
 	\[g(x) = b_0 + x(g(x))^2\]
 	and we know that $b_0 = 1$ so $g(x) = 1 + x(g(x))^2$.\\
 	\newline
 	\textbf{3.2}\\
-	If we let $g(x) = g$ then we can also write $g(x) = 1 + x(g(x))^2$ as $g = 1 + xg^2 \Rightarrow xg^2 - g + 1 = 0$ Using the quadratic formula we can solve $xg^2 - g + 1 = 0$, therefore we get: $g(x) = \frac{1\pm\sqrt{1^2 - 4(x)(1)}}{2x}$ which simplified is: $g(x) = \frac{1\pm\sqrt{1-4x}}{2x}$.  Now we have two options: $g(x) = \frac{1 + \sqrt{1-4x}}{2x}$ and $g(x) = \frac{1 - \sqrt{1-4x}}{2x}$ by applying L'Hopital's rule we get $\lim_{x\to0^+}\frac{1-\sqrt{1-4x}}{2x} = \lim_{x\to0^+}\frac{2(1-4x)^{-\frac{1}{2}}}{2} = 1$\\
+	If we let $g(x) = $ g then we can also write $g(x) = 1 + x(g(x))^2$ as g$ = 1 + x$g$^2 \Rightarrow x$g$^2 - $g$ + 1 = 0$ Using the quadratic formula we can solve $x$g$^2 - $g$ + 1 = 0$, therefore we get: $g(x) = \frac{1\pm\sqrt{1^2 - 4(x)(1)}}{2x}$ which simplified is: $g(x) = \frac{1\pm\sqrt{1-4x}}{2x}$.  Now we have two options: $g(x) = \frac{1 + \sqrt{1-4x}}{2x}$ and $g(x) = \frac{1 - \sqrt{1-4x}}{2x}$ by applying L'Hopital's rule we get $\lim_{x\to0^+}\frac{1-\sqrt{1-4x}}{2x} = \lim_{x\to0^+}\frac{2(1-4x)^{-\frac{1}{2}}}{2} = 1$\\
 	The positive square root doesn't evaluate to 1, therefore we will use $g(x) = \frac{1 - \sqrt{1-4x}}{2x}$\\
 	\newline
 	\textbf{3.3}\\
-	Recalling the Binomial Theorem: for any real number $r,(1+z)^r = \sum_{k=0}^{\infty}\binom{r}{k}z^k$, where $z = -4x$ and $r= \frac{1}{2}$.  Plugging z and r into $\sum_{k=0}^{\infty}\binom{r}{k}z^k$ we obtain $(1 - 4x)^{\frac{1}{2}} = \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k$ and plugging this into $g(x)$ we get:
+	Recalling the Binomial Theorem: for any real number $r,(1+z)^r = \sum_{k=0}^{\infty}\binom{r}{k}z^k$, where $\binom{r}{k} = \left \lbrace \overset{\frac{r(r-1)(r-2)...(r-k+1)}{k!}}{0,},\ \overset{r\in\mathbb{R},\ 0\leq k\in\mathbb{Z}}{k<0} \right \rbrace$\\
+	To expand $g(x)$ we will use the Binomial Theorem on
+	\[\sqrt{1-4x} = (1-4x)^{\frac{1}{2}}\] where $z = -4x$ and $r= \frac{1}{2}$.  Plugging z and r into $\sum_{k=0}^{\infty}\binom{r}{k}z^k$ we obtain $(1 - 4x)^{\frac{1}{2}} = \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k$ and plugging this into $g(x)$ we get:
 	\[g(x) = \frac{1}{2}x(1 - \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k) \]
 	\textbf{3.4}\\
 	To manipulate $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$ into $g(x) = \sum_{n=0}^{\infty}\binom{\frac{1}{2}}{n+1}(-1)^n2^{2n+1}x^n$ let us first take out the first term of the summation to get:
@@ -299,7 +301,7 @@
 	\[(x + x^2 + x^3 + x^4 + x^5 + x^6)(x + x^2 + x^3 + x^4 + x^5 + x^6) = p(x)p(x) = (p(x))^2 \]
 	\newline
 	\textbf{Step 2:}\\
-	Assume there are two dice $A+B$ labeled with positive integers that give you the same probabilities as regular dice.  Then \[A = \{a_1, a_2, a_3, a_4, a_5, a_6 \}\]
+	Assume there are two dice $A\ \&\ B$ labeled with positive integers that give you the same probabilities as regular dice.  Then \[A = \{a_1, a_2, a_3, a_4, a_5, a_6 \}\]
 	\[B = \{b_1, b_2, b_3, b_4, b_5, b_6 \}\]
 	If we use the same method of notation as in step 1 then
 	\[p_A(x) = x^{a_1} + x^{a_2} + x^{a_3} + x^{a_4} + x^{a_5} + x^{a_6}\]
