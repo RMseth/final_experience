@@ -21,12 +21,16 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
+	We know that this problem will have $(n-1)$ because you have $n$ houses and you know that you can't have 1 house delivered to because it will be the right piece of mail so you will have $(n-1)$.  This same pattern will continue so we will then have the following:\\
 	\[D_n = \sum_{i=0}^{\infty} (-1)^i\binom{n}{i}(n-i)\]\\
+	We then take that and expand it to have the following:\\
 	\[D_n = \sum_{i=0}^{\infty}\frac{(-1)^i(n!)(n-i)!}{i!(n-i)!}\]\\
-	\[D_n = (n!)\sum_{(-1)^i}^{i!}\]\\
-	We know that $\sum_{(-1)^i}^{i!} = e^{-1} = \frac{1}{e}$\\
+	Once we have it expanded we can then see that a few of the elements will cancel out.  After we reduce it we get the following:\\
+	\[D_n = (n!)\sum_{i=0}^{n}\frac{(-1)^i}{i!}\]\\
+	We know that $\sum_{i=0}^{\infty}\frac{(-1)^i}{i!} = e^{-1} = \frac{1}{e}$\\
 	This then gives us:
-	\[(n!)\sum_{(-1)^i}^{i!} = \frac{n!}{e}\]
+	\[(n!)\sum_{n=0}^{n} = \frac{n!}{e}\]
+	\newline
 	\newline
 	\textbf{Sub-Experience Two, Part One: PIE Approach}\\
 	The formula you obtain above should involve a truncated power series for $e^{-1}$.  Show that $D_n = \lfloor\frac{n!}{e}+\frac{1}{2}\rfloor, for\ n > 0$. (For $n=0$, the formula doesn't work: $D_0 = 1$, but the formula gives 0.)\\
@@ -59,19 +63,22 @@
 	\newline
 % ***** solution section *****
 	\textbf{2.1}\\
+	Using Taylor Series we get:\\
+	\[e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...\]
+	\[e^{-x} = 1 - \frac{x}{1!} + \frac{x^2}{2!} - \frac{x^3}{3!} + \frac{x^4}{4!} - ...\]
+	When using ones, we have to choose an odd number , so we only have odd-exponent terms:\\
+	\[sinh(x) = \frac{e^x - e^{-x}}{2} = \frac{x}{1!} + \frac{x^3}{3!} + \frac{x^5}{5!} + ...\]
+	Using zeros, we have to choose an even number, so we only have even-exponent terms:\\
+	\[cosh(x) = \frac{e^x + e^{-x}}{2} = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + ...\]
 % need to write the explination
-	$e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...$\\ 
-	$e^{-x} = 1 - \frac{x}{1!} + \frac{x^2}{2!} - \frac{x^3}{3!} + \frac{x^4}{4!} - ...$\\
-% need to write the explination
-	$sinh(x) = \frac{e^x - e^{-x}}{2} = \frac{x}{1!} + \frac{x^3}{3!} + \frac{x^5}{5!} + ...$\\
-% need to write the explination
-	$cosh(x) = \frac{e^x + e^{-x}}{2} = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + ...$\\
-% need to write the explination
+	So, combining these two generating functions we get the generating function for zeros and ones:\\
 	$(\frac{e^x + x^{-x}}{2})(\frac{e^x - e^{-x}}{2}) $\\
 	$(\frac{e^{2x} + x^{-2x}}{4})$\\
 	$\frac{1}{4}[\sum_{n=0}^{\infty}\frac{(2x)^n}{n!} - \sum_{n=0}^{\infty}\frac{(-2x)^n}{n!}]$\\
 	$\frac{1}{4}[\sum_{n=0}^{\infty}2^n\frac{(2)^n}{n!} - \sum_{n=0}^{\infty}(-2)^n\frac{(x)^n}{n!}]$\\
 	$\sum_{n=0}^{\infty}\frac{2^n-(-2)^n}{4}\frac{(x)^n}{n!}$\\
+	$[\frac{x^n}{n!}]\{g(x)\} = \frac{1}{n!} + 4\frac{x^3}{3!} + 16\frac{x^5}{5!} + 64\frac{x^7}{7!} + ...$\\
+	Therefore, 64 is the coefficient and the amount of possible n-digit quaternary sequences. 
 	\textbf{2.2}\\
 	Assuming that the sequence allows for leading 0's, we can have two ways of calculating "odd number of 1's":
 	\[\binom{4}{1} = \binom{4}{3} = 4\]
@@ -324,6 +331,13 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
+	\textbf{Part 1:}
+	To determine the number of partitions of 20 into at most 5 parts, we can use the formula found in lecture meeting forty-one notes:\\
+	\[e(x) = \prod_{i\geq1}^{}(1-x^i)^{-1}\]
+	Since we need the number of partitions of 20 into at most 5 parts.  We will expand the equation using $i=5$ to obtain the coefficient on $x^20$.\\
+	\[p_k(n) = p_5(20) = (1-x)^{-1}(1-x^2)^{-1}(1-x^3)^{-1}(1-x^4)^{-1}(1-x^5)^{-1}\]
+	\[ = \frac{1}{(1-x)(1-x^2)(1-x^3)(1-x^4)(1-x^5)}\]
+	\[ = 1 + x + 2x^2 + 3x^3 + 5x^4 + 7x^5 + ... + 164x^{19} + 192x^{20} + 221x^{21} + ... + 603x^{29} + 674x^{30} + 747x^{31} + ...\]
 \textbf{Part 2:}
 
 \[\left( {{x}^{28}}+{{x}^{24}}+{{x}^{20}}+{{x}^{16}}+{{x}^{12}}+{{x}^{8}}+{{x}^{4}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{25}}+{{x}^{20}}+{{x}^{15}}+{{x}^{10}}+{{x}^{5}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{27}}+{{x}^{24}}+{{x}^{21}}+{{x}^{18}}+{{x}^{15}}+{{x}^{12}}+{{x}^{9}}+{{x}^{6}}+{{x}^{3}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{28}}+{{x}^{26}}+{{x}^{24}}+{{x}^{22}}+{{x}^{20}}+{{x}^{18}}+{{x}^{16}}+{{x}^{14}}+{{x}^{12}}+{{x}^{10}}+{{x}^{8}}+{{x}^{6}}+{{x}^{4}}+{{x}^{2}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{29}}+{{x}^{28}}+{{x}^{27}}+{{x}^{26}}+{{x}^{25}}+{{x}^{24}}+{{x}^{23}}+{{x}^{22}}+{{x}^{21}}+{{x}^{20}}+{{x}^{19}}+{{x}^{18}}+{{x}^{17}}+{{x}^{16}}+{{x}^{15}}+{{x}^{14}}+{{x}^{13}}+{{x}^{12}}+{{x}^{11}}+{{x}^{10}}+{{x}^{9}}+{{x}^{8}}+{{x}^{7}}+{{x}^{6}}+{{x}^{5}}+{{x}^{4}}+{{x}^{3}}+{{x}^{2}}+x+1\right) \]
