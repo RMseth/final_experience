@@ -166,10 +166,16 @@
 	Recalling the Binomial Theorem: for any real number $r,(1+z)^r = \sum_{k=0}^{\infty}\binom{r}{k}z^k$, where $z = -4x$ and $r= \frac{1}{2}$.  Plugging z and r into $\sum_{k=0}^{\infty}\binom{r}{k}z^k$ we obtain $(1 - 4x)^{\frac{1}{2}} = \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k$ and plugging this into $g(x)$ we get:
 	\[g(x) = \frac{1}{2}x(1 - \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k) \]
 	\textbf{3.4}\\
-	
+	To manipulate $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$ into $g(x) = \sum_{n=0}^{\infty}\binom{\frac{1}{2}}{n+1}(-1)^n2^{2n+1}x^n$ let us first take out the first term of the summation to get:
+	\[g(x) - \frac{1}{2x}[(1-(\binom{\frac{1}{2}}{0}(-4x)^0))+\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k+1}(-4x)^{k+1}]\]
+	\[= \frac{1}{2x}[1-(1 + \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k+1}(-4x)^{k+1})]\]
+	$(-4x)^{k+1}$ can also be written as $(-1)^{k+1}(4)^{k+1}(x)^{k+1}$	therefore,
+	\[g(x) = \frac{1}{2x}[1-(1+\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{n+1}(-1)^{k+1}(4)^{k+1}(x)^{k+1}]\]
+	now let us substitute $k+1$ for $n+1$ to get
+	\[g(x) = \frac{1}{2x}[1 - (1+\sum_{n=0}^{\infty}\binom{\frac{1}{2}}{n+1}(-1)^{n+1}(4)^{n+1}(x)^{n+1})]\]
+	If we pull the negative into the summation it will get rid of the ones at the beginning and change $(-1)^{n+1}$ as $(2)^{2n+1}$ and when we take the $\frac{1}{2}$ into the summation which will make $(2)^{2n+1}$.  Then, taking the $\frac{1}{x}$ into the summation as well will turn $(x)^{n+1}$ into $(x)^n$ therefore,
+	\[g(x) = \sum_{n=0}^{\infty}\binom{\frac{1}{2}}{n+1}(-1)^{n}2^{2n+1}x^n\]
 	\textbf{3.5}\\
-	
-	\textbf{3.6}\\
 	To verify that $\binom{\frac{1}{2}}{n+1} = \frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)^n\frac{1}{2}$ let us compute the first 5 values for each expression:\\
 	\begin{center}
 		\begin{tabular}{|c|c|}
@@ -212,7 +218,7 @@
 	
 	Therefore $\binom{\frac{1}{2}}{n+1} = \frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)\frac{1}{2}$ if true.\\
 	\newline
-	\textbf{3.7}\\
+	\textbf{3.6}\\
 	To verify that $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ we will do the same thing we did in 3.5 and compute the first 5 value for each expression.\\
 	\begin{center}
 		\begin{tabular}{|c|c|}
@@ -254,7 +260,20 @@
 	
 	Therefore $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ is true.\\
 	\newline
-
+	\textbf{3.7}\\
+	After verifying 3.5 and 3.6 we can use that information and substitute it into the $g(x)$ we acquired in step 3.4.  Therefore:\\
+	\newline
+	\textbf{formula from 3.4:} $$g(x) = \sum_{n=0}^{\infty}\binom{\frac{1}{2}}{n+1}(-1)^n2^{2n+1}x^n$$\\
+	\textbf{sub 3.5:} $$g(x) = \sum_{n=0}^{\infty}(\frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)^n\frac{1}{2})(-1)^{2n+1}x^n$$\\ 
+	\textbf{sub 3.6:} $$g(x) = \sum_{n=0}^{\infty}\frac{1}{n+1}(\binom{2n}{n}\frac{1}{2^{2n}})(-1)^n2^{2n+1}x^n$$\\
+	If we do some simplifying we get:\\
+	\[g(x) = \sum_{n=0}^{\infty}\frac{x^n}{n+1}\binom{2n}{n}\frac{(-1)^{2n}2^{2n+1}}{2*2^{2n}} \]
+	Here we can see that $(-1)^{2n}$ will always be positive so it will just become 1, therefore we don't have to write it because $a*1 = a$\\
+	We can also see that:
+	\[\frac{2^{2n+1}}{2*2^{2n}} = \frac{2}{2} = 1\]
+	Which gives us:
+	\[g(x) = \sum_{n=0}^{\infty}\frac{x^n}{n+1}\binom{2n}{n} \]
+	
 % ######## sub 4 ########
 	\textbf{Sub-Experience Four: Non-Standard Dice}\\
 	A 6-sided die labeled with the integers 1,2,3,4,5,6 will be called a $standard\ die$.  The goal for this part of the Midterm Experience is to determine all ways to label a pair of dice with positive integers so that the probabilities of rolling the usual sums 2,3,...,12 are the same, but the labels are non-standard.\\
