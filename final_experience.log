@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.10.3)  15 DEC 2015 00:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.10.3)  17 DEC 2015 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -359,127 +359,167 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 61.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--70
+Underfull \hbox (badness 10000) in paragraph at lines 60--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--70
+Underfull \hbox (badness 10000) in paragraph at lines 60--69
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 70--73
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--87
+Underfull \hbox (badness 10000) in paragraph at lines 79--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--87
+Underfull \hbox (badness 10000) in paragraph at lines 79--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--87
+Underfull \hbox (badness 10000) in paragraph at lines 79--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--110
+Underfull \hbox (badness 10000) in paragraph at lines 105--110
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 110--112
+Underfull \hbox (badness 10000) in paragraph at lines 112--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--124
+Underfull \hbox (badness 10000) in paragraph at lines 112--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--141
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--141
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--141
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--141
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--141
+Underfull \hbox (badness 10000) in paragraph at lines 168--172
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 144--149
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
 
  []
 
 
-Overfull \hbox (18.41014pt too wide) in paragraph at lines 156--161
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 241--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--271
+
+ []
+
+
+Overfull \hbox (18.41014pt too wide) in paragraph at lines 278--283
 \OT1/cmr/m/n/10 Suppose $\OML/cmm/m/it/10 S \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 
 f\OML/cmm/m/it/10 a[]; a[]; :::; a[]\OMS/cmsy/m/n/10 g$ \OT1/cmr/m/n/10 is a se
 t of pos-i-tive in-te-gers shar-ing no di-vi-sor; that is, $\OML/cmm/m/it/10 a[
@@ -488,90 +528,106 @@ t of pos-i-tive in-te-gers shar-ing no di-vi-sor; that is, $\OML/cmm/m/it/10 a[
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--161
+Underfull \hbox (badness 10000) in paragraph at lines 278--283
 
  []
 
-
-Overfull \hbox (17.03816pt too wide) in paragraph at lines 163--164
+[5]
+Overfull \hbox (17.03816pt too wide) in paragraph at lines 285--286
 \OT1/cmr/m/n/10 is not counted if any $\OML/cmm/m/it/10 ^^U[] > \OT1/cmr/m/n/10
  5$. So these par-ti-tions of 30 are counted: (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 1,1,1,1,5,5),
  []
 
 
-Overfull \hbox (11.69992pt too wide) in paragraph at lines 163--164
+Overfull \hbox (11.69992pt too wide) in paragraph at lines 285--286
 \OT1/cmr/m/n/10 (1,1,2,2,2,3,4,5,5,5), (5,5,5,5,5,5); while these are not: (1,1
 ,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,10), (6,6,6,6,6), 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--170
+Underfull \hbox (badness 10000) in paragraph at lines 289--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--170
+Overfull \hbox (1327.82462pt too wide) detected at line 294
+[] \OMS/cmsy/m/n/10 ^^A [] ^^A [] ^^A [] ^^A []
+ []
+
+
+Overfull \hbox (155.83698pt too wide) detected at line 296
+\OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + 1006 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/
+n/10 + 913 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 828 \OMS/cmsy/m/n/10 ^^A [
+] \OT1/cmr/m/n/10 + 747 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 674 \OMS/cmsy
+/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 603 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 
+540 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 480 \OMS/cmsy/m/n/10 ^^A [] \OT1/
+cmr/m/n/10 + 427 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 377 \OMS/cmsy/m/n/10
+ ^^A [] \OT1/cmr/m/n/10 + 333 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 291 \OM
+S/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 255 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n
+/10 + 221 \OMS/cmsy/m/n/10 ^^A [] \OT1/cmr/m/n/10 + 192 \OMS/cmsy/m/n/10 ^^A []
+ \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 :::
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--178
+Underfull \hbox (badness 10000) in paragraph at lines 305--309
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 321--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--178
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 190--195
+Underfull \hbox (badness 10000) in paragraph at lines 321--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--195
+Underfull \hbox (badness 10000) in paragraph at lines 321--326
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--195
-
- []
-
-[5] (./final_experience.aux) ) 
+[7] (./final_experience.aux) ) 
 Here is how much of TeX's memory you used:
- 2937 strings out of 493105
- 39526 string characters out of 6137072
- 116235 words of memory out of 5000000
- 6356 multiletter control sequences out of 15000+600000
- 11210 words of font info for 44 fonts, out of 8000000 for 9000
+ 2942 strings out of 493105
+ 39580 string characters out of 6137072
+ 118235 words of memory out of 5000000
+ 6359 multiletter control sequences out of 15000+600000
+ 11714 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,32p,959b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,32p,1192b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm7.pfb>
-Output written on final_experience.pdf (6 pages, 168329 bytes).
+extra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm7.pfb>
+Output written on final_experience.pdf (8 pages, 195045 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

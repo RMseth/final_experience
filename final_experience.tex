@@ -66,7 +66,6 @@
 	3.1 Let $g(x) = \sum_{n=0}^{\infty}b_nx^n$ be the generating function for the sequence $b_n n\geq0$ of the number of binary trees on $n$ vertices.  Show that $g(x) = 1+x(g(x))^2$.\\
 	3.2 Use the quadratic formula to show that $g(x) = 1-\frac{\sqrt{1-4x}}{2x}$. Note that you will have two options to use for $g(x)$, one of which you must rule out.\\
 	3.3 Recall $The\ Binomial\ Theorem:\ For\ any\ real\ number\ r,\ (1+z)^r = \sum_{k=0}^{\infty}\binom{r}{k}z^k$, where 
-% The \left\lbrace creates the { but it will yell at you saying that the \right\brace is missing you don't need to worry about the right one, it's not in the paper and it should compile with the right one missing.
 	\[\binom{r}{k} = \left \lbrace \overset{\frac{r(r-1)(r-2)...(r-k+1)}{k!}}{0,},\ \overset{r\in\mathbb{R},\ 0\leq k\in\mathbb{Z}}{k<0} \right \rbrace \]
 	Use the Binomial Theorem to obtain $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$.\\
 	3.4 Manipulate $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$ into $g(x) = \sum_{n=0}^{\infty}\binom{\frac{1}{2}}{k}(-1)^n2^{2n+1}x^n$.  The reason for doing this is so that $x^n$'s coefficient can be read (remember that $b_n$ is defined to be$ [x^n]g(x)$.)  The following steps are suggested, but not required; follow them only if you have no idea of your own.  Begin with $g(x) = \frac{1}{2x}(1-\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k)$.\\
@@ -84,8 +83,131 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-
-
+	\textbf{3.0}\\
+	\begin{center}
+		\begin{tabular}{|c||l|c|}
+			\hline
+			n&pattern&ways\\
+			\hline
+			\hline
+			n=0&&1 way\\
+			\hline
+			n=1&()&1 way\\
+			\hline
+			n=2&()(),(())&2 ways\\
+			\hline
+			n=3&()()(),()(()),(())(),(()()),((()))&5 ways\\
+			\hline
+			n=4&()()()(),()()(()),()(())(),()(()()),()((())),&\\&(())()(),(())(()),(()())(),((()))(),(()()()),&\\&(()(())),((())()),((()())),(((())))&14 ways\\
+			\hline		
+		\end{tabular}
+	\end{center}
+	\[b_1 = b_0b_0\]\[b_2 = b_1b_0 + b_0b_1\]\[b_3 = b_2b_0 + b_1b_1 + b_0b_2\]\[b_4 = b_3b_0 + b_2b_1 + c_1c_2 + c_0c_3  \]
+	Once we found that pattern and plugged it into $b_n = b_0b_{n-1} + b_1b_{n-2} + ... + b_{n-1}b_0$ with $b_0 = 1$, it gave us the correct values.\\
+	\newline
+	\textbf{3.1}\\
+	If we let $g(x) = \sum_{n-0}^{\infty}b_nx^n$ for $(b_n)n\geq0$ then $g(x) = b_0 + b_1x + b_2x^2 + b_3x^3 + ... + b_nx^n + ...$ If we multiply $g(x)$ by itself to obtain $(g(x))^2$ we get $(g(x))^2 = b_0b_0 + (b_1b_0 + b_0b_1)x + (b_2b_0 + b_1b_1 + b_0b_2)x^2$ which we can see by looking at the coefficients are equal to the equations used to obtain the Catalan numbers.  Therefore:
+	\[(g(x))^2 = b_1 + b_2 + b_3x^2 + b_4x^3 + ...\]
+	we can convert this back to $g(x)$ if we multiply by x and add $b_0$, therefore:
+	\[g(x) = b_0 + x(g(x))^2\]
+	and we know that $b_0 = 1$ so $g(x) = 1 + x(g(x))^2$.\\
+	\newline
+	\textbf{3.2}\\
+	If we let $g(x) = g$ then we can also write $g(x) = 1 + x(g(x))^2$ as $g = 1 + xg^2 \Rightarrow xg^2 - g + 1 = 0$ Using the quadratic formula we can solve $xg^2 - g + 1 = 0$, therefore we get: $g(x) = \frac{1\pm\sqrt{1^2 - 4(x)(1)}}{2x}$ which simplified is: $g(x) = \frac{1\pm\sqrt{1-4x}}{2x}$.  Now we have two options: $g(x) = \frac{1 + \sqrt{1-4x}}{2x}$ and $g(x) = \frac{1 - \sqrt{1-4x}}{2x}$ by applying L'Hopital's rule we get $\lim_{x\to0^+}\frac{1-\sqrt{1-4x}}{2x} = \lim_{x\to0^+}\frac{2(1-4x)^{-\frac{1}{2}}}{2} = 1$\\
+	The positive square root doesn't evaluate to 1, therefore we will use $g(x) = \frac{1 - \sqrt{1-4x}}{2x}$\\
+	\newline
+	\textbf{3.3}\\
+	Recalling the Binomial Theorem: for any real number $r,(1+z)^r = \sum_{k=0}^{\infty}\binom{r}{k}z^k$, where $z = -4x$ and $r= \frac{1}{2}$.  Plugging z and r into $\sum_{k=0}^{\infty}\binom{r}{k}z^k$ we obtain $(1 - 4x)^{\frac{1}{2}} = \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k$ and plugging this into $g(x)$ we get:
+	\[g(x) = \frac{1}{2}x(1 - \sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}(-4x)^k) \]
+	\textbf{3.4}\\
+	
+	\textbf{3.5}\\
+	
+	\textbf{3.6}\\
+	To verify that $\binom{\frac{1}{2}}{n+1} = \frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)^n\frac{1}{2}$ let us compute the first 5 values for each expression:\\
+% need to make the rows taller and the space between tables larger
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{$\binom{\frac{1}{2}}{n+1} = $} \\[.25cm]
+			\hline
+			n&output\\
+			\hline
+			1&$-\frac{1}{8}$\\[.25cm]
+			\hline
+			2&$\frac{1}{16}$\\[.25cm]
+			\hline
+			3&$-\frac{5}{128}$\\[.25cm]
+			\hline
+			4&$\frac{7}{256}$\\[.25cm]
+			\hline
+			5&$-\frac{21}{1024}$\\[.25cm]
+			\hline
+		\end{tabular}
+		\hspace{2em}
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{$\frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)^n\frac{1}{2} = $} \\[.25cm]
+			\hline
+			n&output\\
+			\hline
+			1&$-\frac{1}{8}$\\[.25cm]
+			\hline
+			2&$\frac{1}{16}$\\[.25cm]
+			\hline
+			3&$-\frac{5}{128}$\\[.25cm]
+			\hline
+			4&$\frac{7}{256}$\\[.25cm]
+			\hline
+			5&$-\frac{21}{1024}$\\[.25cm]
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	
+	Therefore $\binom{\frac{1}{2}}{n+1} = \frac{1}{n+1}\binom{n-\frac{1}{2}}{n}(-1)\frac{1}{2}$ if true.\\
+	\newline
+	\textbf{3.6}\\
+	To verify that $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ we will do the same thing we did in 3.5 and compute the first 5 value for each expression.\\
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{$\binom{2n}{n}\frac{1}{2^{2n}} = $} \\[.25cm]
+			\hline
+			n&output\\
+			\hline
+			1&$-\frac{1}{8}$\\[.25cm]
+			\hline
+			2&$\frac{1}{16}$\\[.25cm]
+			\hline
+			3&$-\frac{5}{128}$\\[.25cm]
+			\hline
+			4&$\frac{7}{256}$\\[.25cm]
+			\hline
+			5&$-\frac{21}{1024}$\\[.25cm]
+			\hline
+		\end{tabular}
+		\hspace{2em}
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{$\binom{n-\frac{1}{2}}{n} = $} \\[.25cm]
+			\hline
+			n&output\\
+			\hline
+			1&$-\frac{1}{8}$\\[.25cm]
+			\hline
+			2&$\frac{1}{16}$\\[.25cm]
+			\hline
+			3&$-\frac{5}{128}$\\[.25cm]
+			\hline
+			4&$\frac{7}{256}$\\[.25cm]
+			\hline
+			5&$-\frac{21}{1024}$\\[.25cm]
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	Therefore $\binom{2n}{n}\frac{1}{2^{2n}} = \binom{n-\frac{1}{2}}{n}$ is true.
 
 % ######## sub 4 ########
 	\textbf{Sub-Experience Four: Non-Standard Dice}\\
