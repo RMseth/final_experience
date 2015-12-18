@@ -21,17 +21,7 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-	We know that this problem will have $(n-1)$ because you have $n$ houses and you know that you can't have 1 house delivered to because it will be the right piece of mail so you will have $(n-1)$.  This same pattern will continue so we will then have the following:\\
-	\[D_n = \sum_{i=0}^{\infty} (-1)^i\binom{n}{i}(n-i)\]\\
-	We then take that and expand it to have the following:\\
-	\[D_n = \sum_{i=0}^{\infty}\frac{(-1)^i(n!)(n-i)!}{i!(n-i)!}\]\\
-	Once we have it expanded we can then see that a few of the elements will cancel out.  After we reduce it we get the following:\\
-	\[D_n = (n!)\sum_{i=0}^{n}\frac{(-1)^i}{i!}\]\\
-	We know that $\sum_{i=0}^{\infty}\frac{(-1)^i}{i!} = e^{-1} = \frac{1}{e}$\\
-	This then gives us:
-	\[(n!)\sum_{n=0}^{n} = \frac{n!}{e}\]
-	\newline
-	\newline
+	$D_n = \sum_{i=0}^{\infty} (-1)^n\binom{n}{i}(n-i0)$
 	\textbf{Sub-Experience Two, Part One: PIE Approach}\\
 	The formula you obtain above should involve a truncated power series for $e^{-1}$.  Show that $D_n = \lfloor\frac{n!}{e}+\frac{1}{2}\rfloor, for\ n > 0$. (For $n=0$, the formula doesn't work: $D_0 = 1$, but the formula gives 0.)\\
 	\newline
@@ -63,22 +53,19 @@
 	\newline
 % ***** solution section *****
 	\textbf{2.1}\\
-	Using Taylor Series we get:\\
-	\[e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...\]
-	\[e^{-x} = 1 - \frac{x}{1!} + \frac{x^2}{2!} - \frac{x^3}{3!} + \frac{x^4}{4!} - ...\]
-	When using ones, we have to choose an odd number , so we only have odd-exponent terms:\\
-	\[sinh(x) = \frac{e^x - e^{-x}}{2} = \frac{x}{1!} + \frac{x^3}{3!} + \frac{x^5}{5!} + ...\]
-	Using zeros, we have to choose an even number, so we only have even-exponent terms:\\
-	\[cosh(x) = \frac{e^x + e^{-x}}{2} = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + ...\]
 % need to write the explination
-	So, combining these two generating functions we get the generating function for zeros and ones:\\
+	$e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + ...$\\ 
+	$e^{-x} = 1 - \frac{x}{1!} + \frac{x^2}{2!} - \frac{x^3}{3!} + \frac{x^4}{4!} - ...$\\
+% need to write the explination
+	$sinh(x) = \frac{e^x - e^{-x}}{2} = \frac{x}{1!} + \frac{x^3}{3!} + \frac{x^5}{5!} + ...$\\
+% need to write the explination
+	$cosh(x) = \frac{e^x + e^{-x}}{2} = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + ...$\\
+% need to write the explination
 	$(\frac{e^x + x^{-x}}{2})(\frac{e^x - e^{-x}}{2}) $\\
 	$(\frac{e^{2x} + x^{-2x}}{4})$\\
 	$\frac{1}{4}[\sum_{n=0}^{\infty}\frac{(2x)^n}{n!} - \sum_{n=0}^{\infty}\frac{(-2x)^n}{n!}]$\\
 	$\frac{1}{4}[\sum_{n=0}^{\infty}2^n\frac{(2)^n}{n!} - \sum_{n=0}^{\infty}(-2)^n\frac{(x)^n}{n!}]$\\
 	$\sum_{n=0}^{\infty}\frac{2^n-(-2)^n}{4}\frac{(x)^n}{n!}$\\
-	$[\frac{x^n}{n!}]\{g(x)\} = \frac{1}{n!} + 4\frac{x^3}{3!} + 16\frac{x^5}{5!} + 64\frac{x^7}{7!} + ...$\\
-	Therefore, 64 is the coefficient and the amount of possible n-digit quaternary sequences. 
 	\textbf{2.2}\\
 	Assuming that the sequence allows for leading 0's, we can have two ways of calculating "odd number of 1's":
 	\[\binom{4}{1} = \binom{4}{3} = 4\]
@@ -331,13 +318,6 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-	\textbf{Part 1:}
-	To determine the number of partitions of 20 into at most 5 parts, we can use the formula found in lecture meeting forty-one notes:\\
-	\[e(x) = \prod_{i\geq1}^{}(1-x^i)^{-1}\]
-	Since we need the number of partitions of 20 into at most 5 parts.  We will expand the equation using $i=5$ to obtain the coefficient on $x^20$.\\
-	\[p_k(n) = p_5(20) = (1-x)^{-1}(1-x^2)^{-1}(1-x^3)^{-1}(1-x^4)^{-1}(1-x^5)^{-1}\]
-	\[ = \frac{1}{(1-x)(1-x^2)(1-x^3)(1-x^4)(1-x^5)}\]
-	\[ = 1 + x + 2x^2 + 3x^3 + 5x^4 + 7x^5 + ... + 164x^{19} + 192x^{20} + 221x^{21} + ... + 603x^{29} + 674x^{30} + 747x^{31} + ...\]
 \textbf{Part 2:}
 
 \[\left( {{x}^{28}}+{{x}^{24}}+{{x}^{20}}+{{x}^{16}}+{{x}^{12}}+{{x}^{8}}+{{x}^{4}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{25}}+{{x}^{20}}+{{x}^{15}}+{{x}^{10}}+{{x}^{5}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{27}}+{{x}^{24}}+{{x}^{21}}+{{x}^{18}}+{{x}^{15}}+{{x}^{12}}+{{x}^{9}}+{{x}^{6}}+{{x}^{3}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{28}}+{{x}^{26}}+{{x}^{24}}+{{x}^{22}}+{{x}^{20}}+{{x}^{18}}+{{x}^{16}}+{{x}^{14}}+{{x}^{12}}+{{x}^{10}}+{{x}^{8}}+{{x}^{6}}+{{x}^{4}}+{{x}^{2}}+1\right) \cdot \left( {{x}^{30}}+{{x}^{29}}+{{x}^{28}}+{{x}^{27}}+{{x}^{26}}+{{x}^{25}}+{{x}^{24}}+{{x}^{23}}+{{x}^{22}}+{{x}^{21}}+{{x}^{20}}+{{x}^{19}}+{{x}^{18}}+{{x}^{17}}+{{x}^{16}}+{{x}^{15}}+{{x}^{14}}+{{x}^{13}}+{{x}^{12}}+{{x}^{11}}+{{x}^{10}}+{{x}^{9}}+{{x}^{8}}+{{x}^{7}}+{{x}^{6}}+{{x}^{5}}+{{x}^{4}}+{{x}^{3}}+{{x}^{2}}+x+1\right) \]
@@ -379,6 +359,10 @@
 	\item Now remembering the definitions of $N$, $X$, $n$, and $x$, we are now restricting the members of $X$ such that there can be at most one member of $N$ in a member of $X$.  When starting to place labeled members of $N$ in members of $X$, the first member of $N$ has $x$ possible containers in which it can be placed.  When trying to place the second member of $N$, there are now only $x-1$ places available because one of the members of $X$ has already been filled to the level of restriction.  Following the same pattern, the third member of $N$ only has $x-2$ possibilities, the fourth has $x-3$ possibilities, and the $n$th has $x-(n-1)$ possibilities.  Therefore the the number of ways that the balls of $N$ can be placed in the containers of $X$ is $x^{\underline{n}}$.
 	
 	\item The restriction on the labeled sets of $N$ and $X$ is that now there must be at least one member of $N$ in each member of $X$.  First you need to find the number of ways that the members of $N$ can be distributed to the members of $X$.  In order to do that you find $\stirling{n}{k}$.  Now that you have that you need to apply that number to all the members of $X$, with the result being $x!\stirling{n}{k}$.
+	
+	\item[8.] Let $N$ be a set of labeled balls, labeled from 1 to $n$.  Let $X$ be a set of unlabeled containers, where $x$ is the total number of containers in $X$.  Because the containers in $X$ are all unlabeled and there can be at most one ball in each container, there is no specific order to the placement of balls in containers.  In that case, if $n\leq x$ there is only one possible way to place balls into containers.  If $n\geq x$ there are no possible ways to place all the balls of $N$ into the containers of $X$, because there are more balls than containers.  This would either leave balls without containers or would break the restriction of at most one ball per container.  Therefore the possible number of placements is $[n\leq x]$.
+	
+	\item[11.] Let $N$ be a set of unlabeled balls, where $n$ is the total number of balls in $N$.  Let $X$ be a set of unlabeled balls, where $x$ is the total number of balls in $X$. The restriction is such that there can be at most one ball in each container.  The possible number of placements of the balls in $N$ into the containers in $X$ is the same as part 8.  This is so because if $n\leq x$ there is only one way that the balls can be placed into the containers, but if $n\geq x$ there are extra balls, so there is no way to place all the balls into containers without breaking the restriction.
 \end{enumerate}
 
 \end{document}
