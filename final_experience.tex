@@ -21,7 +21,13 @@
 	\textbf{Solution: }\\
 	\newline
 % ***** solution section *****
-	$D_n = \sum_{i=0}^{\infty} (-1)^n\binom{n}{i}(n-i0)$
+	\[D_n = \sum_{i=0}^{\infty} (-1)^i\binom{n}{i}(n-i)\]\\
+	\[D_n = \sum_{i=0}^{\infty}\frac{(-1)^i(n!)(n-i)!}{i!(n-i)!}\]\\
+	\[D_n = (n!)\sum_{(-1)^i}^{i!}\]\\
+	We know that $\sum_{(-1)^i}^{i!} = e^{-1} = \frac{1}{e}$\\
+	This then gives us:
+	\[(n!)\sum_{(-1)^i}^{i!} = \frac{n!}{e}\]
+	\newline
 	\textbf{Sub-Experience Two, Part One: PIE Approach}\\
 	The formula you obtain above should involve a truncated power series for $e^{-1}$.  Show that $D_n = \lfloor\frac{n!}{e}+\frac{1}{2}\rfloor, for\ n > 0$. (For $n=0$, the formula doesn't work: $D_0 = 1$, but the formula gives 0.)\\
 	\newline
